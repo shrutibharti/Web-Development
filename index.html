@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+<ul>
+    <li>
+        <a href="https://mail.google.com/mail/u/0/">Gmail</a>
+    </li>
+    <li>
+        <a href="https://www.google.com/imghp?hl=en&tab=ri&ogbl">Images</a>
+    </li>
+    <li>
+        <a href="#">
+            <img src="six dot.png" id="sixdg">
+        </a>
+    </li>
+    <li>
+        <a href="https://accounts.google.co.in/">
+            <button id =sgbtn>
+                Sign In
+            </button>
+        </a>
+    </li>
+</ul>
+    </div>
+    <div class="googlelogo">
+        <img src="googlelogo.png">
+
+    </div>
+    <form id="frmsrch">
+        <input type="text" id="textsrch" placeholder="Search Google or Type URL">
+        <img src="google search icon.png" id="serchicn">
+         <img src="google search mic.png"id="mic">
+         <div class="btns">
+            <input type="submit" value ="Google Search" id="submittxt">
+            <button id="feelbtn">
+                <a href="https://www.google.com/doodles/">I'm Feeling Good</a>
+            </button>
+         </div>
+    </form>
+    <script>
+        let srch= document.getElementById('frmsrch');
+        let serchicn = document.getElementById('serchicn');
+        srch.onsubmit = search;
+        serchicn.onclick= search;
+        function search(){
+            window.location = 'https://www.google.com/search?q='+document, 
+            getElementById('textsrch').value;
+            return false;
+
+        }
+    </script>
+</body>
+</html>
